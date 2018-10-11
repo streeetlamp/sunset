@@ -1,0 +1,4 @@
+{
+  "jshint.enable": false,
+  "C_Cpp.default.configurationProvider": "particle.particle-vscode-core"
+}

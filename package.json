@@ -1,8 +1,8 @@
 {
-  "name": "nejsconf-2018",
+  "name": "vcul-sunset",
   "version": "1.0.0",
   "private": true,
-  "description": "Web site for NEJS CONF 2018",
+  "description": "Web site for SunSetting projects",
   "scripts": {
     "test": "npm run test",
     "build": "npx eleventy",
@@ -12,8 +12,8 @@
   "keywords": [
     "NEJS CONF"
   ],
-  "author": "Zach Leatherman",
-  "license": "MIT",
+  "author": "Cody Whitby",
+  "license": "WTFPL",
   "dependencies": {
     "@11ty/eleventy": "^0.5.0",
     "clean-css": "^4.1.11",

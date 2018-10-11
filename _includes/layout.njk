@@ -1,38 +1,31 @@
 ---
-showregisterbutton: true
-showfooter: true
+showregisterbutton: false
+showfooter: false
+title: VCU Libraries Digital Engagement
+header: VCU Libraries
 ---
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>NEJS CONF 2018{% if title %}—{{ title }}{% endif %}</title>
+		<title>Retired Projects{% if title %} — {{ title }}{% endif %}</title>
 {% set css %}{% include "theme.css" %}{% endset %}
 {% set js %}{% include "script.js" %}{% endset %}
-		<link rel="preload" href="/assets/img/earth-nobg-crop.png" as="image" />
 		<style>{{ css | cssmin | safe }}</style>
 		<script>{{ js | jsmin | safe }}</script>
-		<meta property="og:title" content="NEJS CONF 2018{% if title %}—{{ title }}{% endif %}" />
-
-		<meta name="description" content="{% if speaker.name %}{{ speaker.name }} is speaking at NEJS CONF! {% endif %}NEJS CONF is a single day, single track conference dedicated to web development and JavaScript.">
-		<meta name="twitter:description" property="og:description" content="{% if speaker.name %}{{ speaker.name }} is speaking at NEJS CONF! {% endif %}NEJS CONF is a single day, single track conference dedicated to web development and JavaScript.">
-
-		<meta name="twitter:url" property="og:url" content="https://2018.nejsconf.com{{ page.url }}">
-		<meta name="twitter:image" property="og:image" content="https://2018.nejsconf.com{% if speaker.social_avatar_url %}{{ speaker.social_avatar_url }}{% else %}/assets/img/opengraph.png{% endif %}">
-		<meta name="twitter:image:alt" property="og:image:alt" content="{% if speaker.name %}{{ speaker.name }} at {% endif %}NEJS CONF 2018">
-
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@nejsconf">
-		<meta name="twitter:creator" content="@nejsconf">
-
-		<meta property="og:type" content="website">
-		<meta property="og:site_name" content="NEJS CONF 2018">
-		<meta property="og:locale" content="en_US">
-		<meta property="og:image:width" content="1180">
-		<meta property="og:image:height" content="590">
+    <script type="text/javascript" src="//branding.vcu.edu/bar/academic/latest.js"></script>
+		<meta property="og:title" content="SunSet{% if title %} — {{ title }}{% endif %}" />
 	</head>
 	<body{% if bodyclass %} class="{{ bodyclass }}"{% endif %}>
+  <header id="primary">
+  <section class="library" aria-label="library-header">
+    <div class="wrapper">
+      <div class="context-switcher">
+	      <a href="/" title="Return Home" aria-label="Return Home">{% if header %}{{ header }}{% endif %}</a>
+      </div>
+  </section>
+</header>
 {% if skipHero -%}
 {% else -%}
 		<div class="sg-c">
@@ -45,20 +38,7 @@ showfooter: true
 		{{ content | safe }}
 
 {% if showfooter %}
-		<footer>
-			<div class="sg-c">
-{% if showregisterbutton %}
-				<div class="sg-component sg-component-full sg-component-dark">
-					<h2 class="hero-register"><a href="https://register.nejsconf.com/" class="btn-primary">Register <span>for NEJS CONF</span></a></h2>
-				</div>
+
 {% endif %}
-				<div class="sg-component">
-					<p>©2018 <a href="https://twitter.com/nejsconf/lists/nejs-conf-organizers/members">NEJS CONF Organizers</a> and <a href="https://nebraskajs.com/">NebraskaJS</a>. Part of Nebraska JavaScript, LLC.</p>
-				</div>
-			</div>
-		</footer>
-{% endif %}
-{% set imgJs %}{% include "images.js" %}{% endset %}
-		<script>{{ imgJs | jsmin | safe }}</script>
 	</body>
 </html>
