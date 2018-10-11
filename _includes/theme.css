@@ -5,6 +5,7 @@ header#primary section.library,header#secondary section.library,header#responsiv
   background: #437C90;
   padding: 8px 0;
   box-sizing: border-box;
+  margin-bottom: 40px;
 }
 
 header#primary .wrapper {
@@ -26,13 +27,23 @@ header#primary a {
 }
 
 /* Global */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 body {
 	font-family: 'Open Sans', sans-serif;
 	margin: 0;
-	padding: 0;
+  padding: 0;
+  background: #3ACCCC;
 }
 footer {
 	text-align: center;
+}
+
+p {
+  letter-spacing: .0175em;
+  line-height: 1.45;
 }
 
 /* Code */
@@ -73,3 +84,88 @@ dd {
 dd :first-child {
 	margin-top: 0;
 }
+
+.inner-wrap {
+  width: 90%;
+  max-width: 1185px;
+  margin: 0 auto;
+}
+
+// sun // 
+/**
+ * Main styles that define the elements of the scene.
+ */
+
+ .sky,
+ .hill-background,
+ .hill-foreground {
+   transition: background-color 0.5s ease-out;
+ }
+ 
+ .sun {
+   width: 200px;
+   height: 200px;
+   margin: auto;
+   position: absolute;
+   bottom: 160px;
+   left: 260px;
+   border-radius: 50%;
+   box-shadow: 0 0 200px rgba(255,255,255, 0.8);
+ }
+ 
+ .hills-wrapper {
+   position: relative;
+ }
+ 
+ .hill-background,
+ .hill-foreground {
+   position: fixed;
+   width: 100%;
+   bottom: 0;
+ }
+ 
+ .hill-background {
+   height: 40%;
+   border-radius: 175% 0 0 0;
+ }
+ 
+ .hill-foreground {
+   height: 28%;
+   border-radius: 0 280% 0 0;
+ }
+ 
+ /**
+  * Day color pallet.
+  */
+ 
+ .sun {
+   background-color: #ffdc00;
+ }
+ 
+ .sky {
+   background-color: #39cccc;
+ }
+ 
+ .hill-background {
+   background-color: #2BC03C;
+ }
+ 
+ .hill-foreground {
+   background-color: #2ecc40;
+ }
+ 
+ /**
+  * Night color pallet.
+  */
+ 
+ .sky.night {
+   background-color: #001f3f;
+ }
+ 
+ .hill-background.night {
+   background-color: #0A300F;
+ }
+ 
+ .hill-foreground.night {
+   background-color: #0D3D13;
+ }
