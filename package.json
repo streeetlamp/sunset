@@ -6,8 +6,7 @@
   "scripts": {
     "test": "npm run test",
     "build": "npx eleventy",
-    "clean": "rm -rf _site",
-    "deploy": "npm run clean; npm run build; echo \"Note: Requires an 'nejsconf2018' host in .ssh/config\"; rsync --archive --verbose --stats --compress --rsh=ssh ./_site/ nejsconf2018:/home/public/"
+    "clean": "rm -rf _site"
   },
   "keywords": [
     "NEJS CONF"
