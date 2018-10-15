@@ -26,15 +26,6 @@ header: VCU Libraries
       </div>
   </section>
 </header>
-{% if skipHero -%}
-{% else -%}
-		<div class="sg-c">
-			<div class="sg-component-full">
-				{% include "components/hero.njk" %}
-			</div>
-		</div>
-{% endif -%}
-
 		{{ content | safe }}
 
 {% if showfooter %}
