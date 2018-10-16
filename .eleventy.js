@@ -32,7 +32,7 @@ module.exports = function(eleventyConfig) {
 		passthroughFileCopy: true,
     pathPrefix: "/",
     dir: {
-      output: "docs"
+      output: "public"
     }
 	};
 };
