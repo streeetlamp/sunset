@@ -14,7 +14,7 @@
   "author": "Cody Whitby",
   "license": "WTFPL",
   "dependencies": {
-    "@11ty/eleventy": "^0.5.0",
+    "@11ty/eleventy": "^1.0.2",
     "clean-css": "^4.1.11",
     "uglify-js": "^3.3.25"
   }
